@@ -17,6 +17,5 @@ class EventView(generic.DetailView):
     model = Event
     template_name = 'eventFinderApp/event.html'
 
-
 def account(request):
     return render(request, 'eventFinderApp/account.html')
