@@ -8,19 +8,28 @@
         <title>Eventive</title>
         <meta name="description" content="">
         <meta name="author" content="Hayley van Waas">
+        <script type="text/javascript" src="{% url 'javascript-catalog' %}"></script>
+        <script type="text/javascript" src="{% static '/admin/js/core.js' %}"></script>
         <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{% static 'eventFinderApp/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static '/admin/css/widgets.css' %}">
+        <style>
+            .calendar>table>caption{caption-side:unset}
+        </style><!--caption fix for bootstrap4-->
+
     </head>
 
     <body>
         <header>
             <div>
                 <h1>Eventive</h1>
-                <h2>finding eventive ways to spend your time!</h2>
+                <h2>finding Eventive ways to spend your time!</h2>
             </div>
             {% include './nav.html' %}
         </header>
 
-        {% block content %}{% endblock %}
+        {% block content %}
+       
+        {% endblock %}
     </body>
 </html>
