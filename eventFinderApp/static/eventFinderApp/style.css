@@ -39,8 +39,9 @@ a {
     border: 1px solid #ff006f;
     border-radius: 5px;
     font-size: 1.5rem;
-    height: 50px;
+    height: 50px;    
     cursor: pointer;
+    padding: 4em;
 }
 
 #new-event:hover {

@@ -3,7 +3,7 @@
         <p>{{ event.title }}</p>
         <p>{{ event.start_time }}</p>
         <p>{{ event.location }}</p>
-
+        <p>{{event.host}}</p>
         <p>
             {% if event.categories %}
                 {% for category in event.categories.all %}

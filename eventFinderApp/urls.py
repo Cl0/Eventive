@@ -3,6 +3,7 @@ from . import views
 
 
 
+
 app_name = 'eventFinderApp'
 
 urlpatterns = [
@@ -10,9 +11,11 @@ urlpatterns = [
     path('', views.event_list, name='index'),
     # event-finder/1
     path('<int:pk>/', views.EventView.as_view(), name='event'),
-    # event-finder/my-account
-    path('my-account/', views.account, name='account'),
+    # loggin in - event-finder/my-account
+    path('login/my-account/', views.account, name='account'),   
     # event-finder/new-event - adding a new event page
-    path('new-event/', views.event_create_view, name='new_event'),
+    path('login/my-account/new-event/', views.event_create_view, name='new-event'),    
+    #show all events
     path (r'^list$', views.event_list),
+
 ]

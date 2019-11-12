@@ -51,7 +51,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',    
     'django_filters',
     'bootstrapform',
+    'users.apps.UsersConfig',
 ]
+
+AUTH_USER_MODEL = 'users.CustomUser'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -64,6 +68,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'eventFinderProject.urls'
+
+LOGIN_REDIRECT_URL = 'eventFinderApp:account'
+LOGOUT_REDIRECT_URL = 'eventFinderApp:index'
+
 
 TEMPLATES = [
     {

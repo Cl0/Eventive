@@ -5,8 +5,10 @@
 <p>Hi {{ user.username }}</p>
 
 You should put the user's account information and upcoming events here.
+<p>This is the accounts page</p>
 
+<a href="{% url 'eventFinderApp:new-event' %}" id="new-event">+ Create new event</a>
 
-<button id="new-event">+ Create new event</button>
+<p>Events Hosted by me:</p>
 
 {% endblock %}
