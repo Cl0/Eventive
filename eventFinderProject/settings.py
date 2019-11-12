@@ -27,16 +27,16 @@ SECRET_KEY = 'ia%+sm_))53wjxov*1abig1-&*w8cu#f78@-(k3vu=ehn25@_q'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-    if 'BEANSTALK_HOST' in os.environ:
-        ALLOWED_HOSTS.append(os.environ['BEANSTALK_HOST'])
+if 'BEANSTALK_HOST' in os.environ:
+    ALLOWED_HOSTS.append(os.environ['BEANSTALK_HOST'])
 
-        try:
-            # Be sure your ALLOWED_HOSTS is a list NOT a tuple
-            # or .append() will fail
-            ALLOWED_HOSTS.append(socket.gethostbyname(socket.gethostname()))
-        except:
-            # silently fail as we may not be in an ECS environment
-            pass
+    try:
+        # Be sure your ALLOWED_HOSTS is a list NOT a tuple
+        # or .append() will fail
+        ALLOWED_HOSTS.append(socket.gethostbyname(socket.gethostname()))
+    except:
+        # silently fail as we may not be in an ECS environment
+        pass
 
 
 # Application definition
@@ -48,7 +48,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles',    
+    'django_filters',
+    'bootstrapform',
 ]
 
 MIDDLEWARE = [
