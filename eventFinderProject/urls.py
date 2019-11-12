@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Javascript for date time picker
     path('jsi18n', JavaScriptCatalog.as_view(), name='javascript-catalog'),
+    #event-finter/eventFilder - filtering events
 ]

@@ -25,10 +25,14 @@
                 <h1>Eventive</h1>
                 <h2>finding Eventive ways to spend your time!</h2>
             </div>
+            
             {% include './nav.html' %}
+            
+
         </header>
 
         {% block content %}
+        {% include './eventFilter.html' %}
        
         {% endblock %}
     </body>
