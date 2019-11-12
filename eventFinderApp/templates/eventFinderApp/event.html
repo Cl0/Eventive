@@ -14,8 +14,9 @@
         {% for category in event.categories.all %}
            {{category.name}}{% if not forloop.last %}, {% endif %}
         {% endfor %}
-    {% endif %}
+    {% endif %}    
 </p>
+<p>User: {{event.host}}</p>
 
 {% endblock %}
 

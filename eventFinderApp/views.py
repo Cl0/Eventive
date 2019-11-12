@@ -34,12 +34,15 @@ def event_create_view(request):
         context = {
             'form': form
         }       
-        return render(request, 'eventFinderApp/eventForm.html', context)
+        return render(request, 'eventFinderApp/account.html', context)
 
     else:
-        form = EventForm()
+        form = EventForm(initial={
+            'host': request.user
+        })        
         context = {
             'form': form
         }    
 
         return render(request, 'eventFinderApp/eventForm.html', context)
+
