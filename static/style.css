@@ -1,0 +1,294 @@
+html {    
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+body {
+    margin: 0;    
+}
+
+.header-container {    
+    width: 100%;
+    height: 95px;    
+    background-color: #fff;
+    border-bottom: 1px solid #617070;
+    color: #070407;
+    margin-bottom: 0;
+    padding: 0;
+    margin: 0;
+    display: flex;  
+    flex-direction: row;       
+}
+
+.title-container {
+    width: 40%;
+    padding-top: 0;    
+    padding-left: 2em;
+    margin-top: 0;    
+    display: flex;
+    flex-direction: column;    
+}
+
+h1, h2 {    
+    color: #070407;
+    display: column;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 0.5em;
+    padding-bottom: 0;
+    margin: 0;
+    align-items: flex-start;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: normal;
+    align-items: flex-end;
+    padding-top: 0.5em;
+    margin: 0;
+}
+
+.nav-container {   
+    width: 60%;
+    padding-right: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-top: 2em;
+    padding-right: 3em;
+    font-size: 1.1em;
+    
+}
+
+.nav, li {
+    display: inline-block;    
+}
+
+.nav, li, a {
+    color: #070407;
+    text-decoration: none;
+    padding-left: 0.5em;    
+}
+
+.nav li, a:hover{
+   color: rgba(85,172,238 ,1);
+ }
+
+ .nav, li, img {
+    padding-left: 0.5em;
+ }
+
+.main-container {
+    background-image:url(images/eventive-main-photo.jpg);
+    background-size: cover; /* or contain depending on what you want */
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 0px;
+    margin-bottom: 2em;
+    width: 100%;
+    height: 550px;    
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column; 
+ }
+
+ .filter-container {
+     height: 300px;
+     width: 60%;     
+     flex-direction: column;    
+     align-items: center;
+     background-color: rgba(122, 0, 152, 0.37);
+ }
+
+ .filter-container h3 {
+     width: 100%;
+     font-size: 4em;
+     text-align: center;
+     padding-top: 0.5em;
+     padding-bottom: 0.5em;
+     margin: 0em;
+     color: #FFF;    
+ }
+
+ .form-filter-container p {
+     display: inline;
+     padding-left: 0.5em;
+     font-size: 2em;
+     color: #FFF;
+ }
+
+ .form-filter-container input {
+     text-align: center;
+     height: 1.4em;
+     margin-left: 1em; 
+     border: none;       
+     color: blue;
+ } 
+
+ .form-filter-container select {       
+    color: blue;
+    border: none;  
+    height: 1.4em;
+    width: 12em;
+    padding-left:0.5em;
+} 
+
+.filter-row-container {
+    margin: 0 auto;
+    display: flex;
+    height: auto;
+    width: fit-content;
+    padding-left:2em;   
+}
+
+.filter-row-container .filter-button {
+    border-radius: 0.4em;
+    text-align: center;    
+    width: 5em;
+    font-family: 'Yanone Kaffeesatz', sans-serif;    
+    color: #fff;
+    font-size: 20px;
+    border: #FFF;
+    background-color: rgba(255,255,255,0.5);
+    text-align: 0;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.event-container, .account-events-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card-container {    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 2em;
+    padding-top: 3em;
+    width: 30%;
+}
+
+.card { 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; 
+    margin-bottom: 4em;
+}
+
+.card-container img {
+    height: 200px;
+    padding: 1em;
+    
+}
+
+.login-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 5em;
+}
+
+.login-form-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;    
+    padding-top: 0.5em;  
+    text-align: center;  
+    /*background-color: rgba(128,128,128, 0.1);*/
+}
+
+.login-form-container {
+    width: 100%;
+
+}
+
+.login-form-container h2 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+
+.login-form-container, p {
+    padding-bottom: 0.5em;
+    padding-right: 1em;
+
+}
+
+.login-form-container form button {
+    border-radius: 0.4em;
+    padding: 0.32em;
+    width: 5em;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    border: #000;   
+}
+
+.login-form-container form input {    
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 0.1em solid black;
+    outline: none;
+}
+.account-container {
+    font-family: "Yanone Kaffeesatz",sans-serif;
+    padding-left: 4em;
+}
+
+.usergreeting {
+    font-size: 2em; 
+    padding-bottom: 0.5em;   
+    margin-bottom: 0;
+}
+
+.account-header, .event-header{
+    font-size: 1.5em;         
+}
+
+.event-header {
+    padding-left: 0.5em;
+    text-align: center;
+}
+
+.details-box, .event-info {
+    font-size: 1em;
+    text-align: left;
+    padding-bottom: 0;
+    padding-top: 0; 
+    padding-left: 1em;   
+    margin: 0; 
+    line-height: 0.6em;   
+}
+
+#new-event {
+    border-radius: 0.4em;
+    padding-bottom: 5em;
+    padding: 0.32em;
+    width: 5em;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    border: #000;  
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 400px;
+    padding-left: 0;
+    margin-left: 0;
+}
+  

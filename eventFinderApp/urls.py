@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from django.urls import include, path
 
 
 
@@ -16,6 +17,6 @@ urlpatterns = [
     # event-finder/new-event - adding a new event page
     path('login/my-account/new-event/', views.event_create_view, name='new-event'),    
     #show all events
-    path (r'^list$', views.event_list),
-
+    path (r'^list$', views.event_list),      
 ]
+

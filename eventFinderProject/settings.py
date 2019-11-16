@@ -41,7 +41,7 @@ if 'BEANSTALK_HOST' in os.environ:
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [   
     'eventFinderApp.apps.EventfinderappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -49,12 +49,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',    
-    'django_filters',
+    'django_filters',    
     'bootstrapform',
     'users.apps.UsersConfig',
+    'crispy_forms',    
+    'rest_framework', 
+    'rest_framework.authtoken',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}
 
 
 MIDDLEWARE = [
@@ -76,7 +85,7 @@ LOGOUT_REDIRECT_URL = 'eventFinderApp:index'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [(os.path.join(BASE_DIR, 'templates')),],            # <------- THIS LINE HAS BEEN UPDATED
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -88,6 +97,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'eventFinderProject.wsgi.application'
 
@@ -154,7 +164,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'eventFinderApp', 'static'),
+]
+
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 if 'S3_BUCKET' in os.environ:
     # setup AWS S3 as the storage for static and media
@@ -164,3 +182,5 @@ if 'S3_BUCKET' in os.environ:
     # define the AWS S3 bucket to use for storage
     AWS_STORAGE_BUCKET_NAME = os.environ['S3_BUCKET']
     AWS_DEFAULT_ACL = 'public-read'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
