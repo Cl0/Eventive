@@ -3,6 +3,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 class CustomUser(AbstractUser):
+  '''events = models.OneToMany(Event)'''
   # add additional fields in here
 
   def __str__(self):

@@ -3,6 +3,7 @@ from django.views import generic
 from django.shortcuts import render
 from .models import Event
 from .forms import EventForm
+from django_filters.views import FilterView
 from .filters import EventFilters
 
 class EventView(generic.DetailView):

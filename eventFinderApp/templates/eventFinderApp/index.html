@@ -1,18 +1,34 @@
-{% extends "./base.html" %}
+{% extends "base.html" %}
+
 
 {% block content %}
-    <h3>See what's on!</h3>
 
-    <form action="" method="get">
-        {{filter.form.as_p}}
-        <input type="submit" />
-    </form>
-
+<div class="main-container">
+    <div class="filter-container">
+        <h3>See what's on!</h3>
+        <div class="form-filter-container">
+            <div class="filter-row-container">
+                <form action="" method="get">
+                    {{filter.form.as_p}}  
+                    <input type="submit" value="submit" class="filter-button"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="event-container">     
     {% if filter.qs %}
         {% for event in filter.qs %}
-            {% include "./detailsBox.html" with event=event %}
+            <div class="card-container">
+                <div class="card">           
+                    {% include "./detailsBox.html" with event=event %}                      
+                </div>
+            </div>
         {% endfor %}
     {% else %}
         <p>No events are available.</p>
     {% endif %}
-{% endblock %}
+</div>
+{% endblock %}               
+            
+

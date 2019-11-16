@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>See what's on!</h3>
+
+    <form action="" method="get">
+        {{filter.form.as_p}}
+        <input type="submit" />
+    </form>
+
+    {% if filter.qs %}
+        {% for event in filter.qs %}
+            {% include "./detailsBox.html" with event=event %}
+        {% endfor %}
+    {% else %}
+        <p>No events are available.</p>
+    {% endif %}
+{% endblock %}

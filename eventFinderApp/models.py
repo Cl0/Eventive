@@ -9,13 +9,19 @@ class Event(models.Model):
     start_time = models.DateTimeField('start time and date')
     end_time = models.DateTimeField('end time and date')
     categories = models.ManyToManyField('Category', related_name='events')
-    host = models.ForeignKey(CustomUser, on_delete=models.CASCADE) 
+    host = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+   
     
     def __str__(self):
         return self.title
 
 class Category(models.Model):
     name = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='categoryimages/')
 
     def __str__(self):
         return self.name 
+
+
+   
+
