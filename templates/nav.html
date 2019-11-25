@@ -6,7 +6,7 @@
         <li><a href="{% url 'logout' %}">Logout<img src="/static/images/shut-down-icon.png"></a></li>
     {% else %}
         <li><a href="{% url 'login' %}">Login<img src="/static/images/user.png"></a></li>
-        <li><a>Sign Up<img src="/static/images/writing.png"></a></li>        
+        <li><a href="{% url 'signup' %}">Sign Up<img src="/static/images/writing.png"></a></li>        
     {% endif %} 
     </ul>   
 </nav>

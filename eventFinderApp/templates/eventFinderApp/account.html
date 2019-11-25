@@ -5,9 +5,10 @@
 <div class="account-container">
     <p class="usergreeting">Hi {{ user.username }}!</p>
     <p class="account-header">Here is your account information:</p>
-
-    <p>You should put the user's account information and upcoming events here.</p>  
-
+    <p>Username: {{user.username}}</p>
+    <p>First Name: {{user.firstname}}</p>
+    <p>Surname: {{user.surname}}</p>
+    <p>Email: {{user.email}}</p>
     <a href="{% url 'eventFinderApp:new-event' %}" id="new-event">+ Create new event</a>
 
     <p class="account-header">Events Hosted by me:</p>
