@@ -22,6 +22,7 @@ from rest_framework.authtoken import views
 from users import viewsets as UserViewsets
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic.base import TemplateView
 
 router = routers.DefaultRouter()
 router.register(r'events', viewsets.EventViewSet)
@@ -32,7 +33,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Javascript for date time picker
     path('jsi18n', JavaScriptCatalog.as_view(), name='javascript-catalog'),
-    #path for the users App
+    #path for the sign up form 
+    path('users/', include('users.urls')),
+    #path for the users App    
     path('event-finder/', include('django.contrib.auth.urls')),
     path('api/', include(router.urls)), 
     path(r'api-auth-token/', views.obtain_auth_token),   
@@ -43,4 +46,4 @@ urlpatterns = [
 if settings.DEBUG: # new
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-   
+ 

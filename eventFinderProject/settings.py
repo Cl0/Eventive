@@ -85,7 +85,10 @@ LOGOUT_REDIRECT_URL = 'eventFinderApp:index'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [(os.path.join(BASE_DIR, 'templates')),],            # <------- THIS LINE HAS BEEN UPDATED
+        'DIRS': [
+            (os.path.join(BASE_DIR, 'templates')),
+            (os.path.join(BASE_DIR, 'users/templates'))
+        ],        
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -110,7 +113,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'events', # you will need to create this db
         'USER': 'postgres', # enter your user name here
-        'PASSWORD': 'L3w1s!22',
+        'PASSWORD': 'Password1',
         'HOST': 'localhost',
         'PORT': '5432',
     }
