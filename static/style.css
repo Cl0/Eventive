@@ -235,8 +235,7 @@ h2 {
     display: flex;    
     flex-direction:column;    
     padding-top: 0.5em;  
-    text-align: center;  
-    background-color: rgba(128,128,128, 0.1);
+    text-align: center;      
 }
 
 .login-form-container {
@@ -286,14 +285,21 @@ h2 {
     border-left: none;
     border-bottom: 0.1em solid black;
     outline: none;
-    margin-right: 0.5em;
+    margin-right: 0.5em;    
 }
+
+.new-event-form-container label {
+    padding-top: 2em;   
+}
+
+
 
 .helptext, form li {
     color: red;
     display:inline;
     padding-left: 1em;      
     font-size: 0.8em;
+    display:none;
 }
 
 .signup-link, .signin-link {
@@ -356,7 +362,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin-top: 4em;
+    margin-top: 29em;
     margin-bottom: 0;
 }
   
